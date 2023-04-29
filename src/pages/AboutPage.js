@@ -1,4 +1,4 @@
-import { Col, Row, Container, CardBody, CardHeader, Card} from "reactStrap";
+import { Col, Row, Container, CardBody, CardHeader, Card} from "reactstrap";
 
 const AboutPage = () => {
     return (
