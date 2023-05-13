@@ -1,13 +1,14 @@
 import { useState } from "react";
-import { Button, Modal, ModalHeader, ModalBody, FormGroup, Label } from "reactstrap";
-import { Formik, Field, Form, ErrorMessage } from 'formik';
-import { validateCommentForm } from "../../utils/validateCommentForm";
 import { useDispatch } from "react-redux";
+import { Formik, Field, Form, ErrorMessage } from 'formik';
+import { Button, Modal, ModalHeader, ModalBody, FormGroup, Label } from "reactstrap";
+import { validateCommentForm } from "../../utils/validateCommentForm";
 import { addComment } from "./commentsSlice";
 
 
 const CommentForm = ({campsiteId}) => {
     const [modalOpen, setModalOpen] = useState(false);
+
     const dispatch = useDispatch();
 
     const handleSubmit = (values) => {
