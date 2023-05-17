@@ -6,9 +6,17 @@ import Footer from './components/Footer';
 import CampsiteDetailPage from './pages/CampsiteDetailPage';
 import CampsitesDirectoryPage from './pages/CampsitesDirectoryPage';
 import AboutPage from './pages/AboutPage';
+import { useEffect } from 'react';
+import { useDispatch } from 'reactredux';
+import { fetchCampsites } from './features/campsites/campsitesSlice';
 import './App.css';
 
 function App() {
+    const dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(fetchCampsites());
+    }, [dispatch]);
+    
     return (
         <div className='App'>
             <Header />
